@@ -14,6 +14,7 @@ services:
       - LDAP_ADMIN_PASSWORD=adminpassword
       - LDAP_USERS=user01,user02
       - LDAP_PASSWORDS=password1,password2
+      - LDAP_ALLOW_ANON_BINDING=no
 #    networks:
 #      - my-network
     volumes:

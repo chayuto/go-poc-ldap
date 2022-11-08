@@ -10,7 +10,7 @@ const (
 	//BindUsername = "cn=admin,dc=example,dc=org"
 	BindUsername = "cn=user01,dc=example,dc=org"
 	//BindPassword = "adminpassword"
-	BindPassword = "password1"
+	BindPassword = "password1-WRONGGGG"
 	FQDN         = "DC.example.org"
 	BaseDN       = "cn=user02,OU=Users,dc=example,dc=org"
 	Filter       = "(objectClass=*)"
