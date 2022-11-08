@@ -7,10 +7,12 @@ import (
 )
 
 const (
-	BindUsername = "cn=admin,dc=example,dc=org"
-	BindPassword = "adminpassword"
+	//BindUsername = "cn=admin,dc=example,dc=org"
+	BindUsername = "cn=user01,dc=example,dc=org"
+	//BindPassword = "adminpassword"
+	BindPassword = "password1"
 	FQDN         = "DC.example.org"
-	BaseDN       = "dc=example,dc=org"
+	BaseDN       = "cn=user02,OU=Users,dc=example,dc=org"
 	Filter       = "(objectClass=*)"
 )
 
@@ -47,6 +49,7 @@ func main() {
 	result.Entries[0].Print()
 
 	//Create new Add request object to be added to LDAP server.
+	//l.Bind(BindUsername, BindPassword)
 	//a := ldap.NewAddRequest("ou=groups,dc=example,dc=org", nil)
 	//a.Attribute("cn", []string{"gotest"})
 	//a.Attribute("objectClass", []string{"top"})
@@ -55,6 +58,19 @@ func main() {
 	//
 	//fmt.Println("Testing.")
 	//add(a, l)
+
+	//l.Bind(BindUsername, BindPassword)
+	//addReq := ldap.NewAddRequest("CN=testgroup,ou=Groups,dc=example,dc=org", []ldap.Control{})
+	//
+	//addReq.Attribute("objectClass", []string{"top", "group"})
+	//addReq.Attribute("name", []string{"testgroup"})
+	//addReq.Attribute("sAMAccountName", []string{"testgroup"})
+	//addReq.Attribute("instanceType", []string{fmt.Sprintf("%d", 0x00000004)})
+	//addReq.Attribute("groupType", []string{fmt.Sprintf("%d", 0x00000004|0x80000000)})
+	//
+	//if err := l.Add(addReq); err != nil {
+	//	log.Fatal("error adding group:", addReq, err)
+	//}
 }
 
 // Ldap Connection with TLS
